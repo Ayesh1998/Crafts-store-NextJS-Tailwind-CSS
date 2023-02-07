@@ -56,6 +56,7 @@ export enum SalesApiErrors{
     FETCHING_ALL_SALES_UNSUCCESSFUL = "Fetching sales unsuccessful!",
     FETCHING_USER_SALES_UNSUCCESSFUL = "Fetching orders unsuccessful!",
     BUYING_CRAFT_UNSUCCESSFUL = "Buying crafts unsuccessful!",
+    ORDER_CRAFTS_TO_SEE_ANALYTICS = "Order crafts to see Analytics!",
 }
 
 export enum UserApiErrors{

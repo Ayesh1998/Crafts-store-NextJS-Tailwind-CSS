@@ -25,7 +25,13 @@ const CheckoutCrafts = ({ items, id }: Props) => {
   return (
     <div className="checkout-crafts-wrapper">
       <div className="relative h-44 w-44">
-        <Image src="" alt="" fill style={{ objectFit: "contain" }} />
+        <img
+          src={
+            items[0].photo.includes("http") ? items[0].photo : "/no-image-black.png"
+          }
+          alt=""
+          style={{ objectFit: "contain" }}
+        />
       </div>
 
       <div className="flex flex-1 items-end lg:items-center">

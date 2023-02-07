@@ -44,7 +44,12 @@ const Craft = ({ craft }: Props) => {
   return (
     <div className="single-craft-wrapper ">
       <div className="relative h-64 w-full md:h-72">
-        <Image fill style={{ objectFit: "contain" }} alt="" src={""} />
+        <Image
+        fill
+          style={{ objectFit: "contain",  }}
+          alt=""
+          src={craft.photo.includes("http") ? craft.photo : "/no-image.png"}
+        />
       </div>
       <Modal
         isOpen={isOpen}

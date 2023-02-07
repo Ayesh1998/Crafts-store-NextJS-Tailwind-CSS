@@ -10,7 +10,7 @@
 
 ## Hosted URL
 
-- Hosted Link - https://swivel-assignment1.netlify.app/employee/list
+- Hosted Link - https://crafts-store.vercel.app/
 
 ## How to run frontend storybook 
 

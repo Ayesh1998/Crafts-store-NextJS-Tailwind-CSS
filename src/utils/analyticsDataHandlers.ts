@@ -35,8 +35,9 @@ const bestSellingCraftIdFindingHandler = (arr: Transactions[]) => {
 //best selling craft finding handler for 12 months
 export const bestSellingOrOrderedCraftDataHandler = (transactions: Transactions[]) => {
   let data = [];
+
   for (let i = 0; i < 12; i++) {
-    let filteredTransactions = transactions.filter(
+    let filteredTransactions = transactions?.filter(
       (transaction) => parseInt(transaction.month) === i
     );
 

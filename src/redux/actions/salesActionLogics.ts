@@ -38,12 +38,9 @@ export const getAllSalesLogic = () => async (dispatch: Dispatch) => {
 
   try {
     let sales: Transactions[] = await getAllSalesApi();
-
-    dispatch(getTransactions(sales));
+    let validSales = sales.filter((transaction) => transaction.prodID);
+    dispatch(getTransactions(validSales));
     dispatch(stopLoading());
-    // toast.success(`Crafts bought successful`, {
-    //   position: "bottom-center",
-    // });
   } catch (error: any) {
     dispatch(addError(error?.message));
     dispatch(stopLoading());
@@ -57,13 +54,17 @@ export const getAllTransactionsLogic =
     dispatch(startLoading());
 
     try {
-      let sales: Transactions[] = await getAllTransactionsApi(userId);
-
-      dispatch(getTransactions(sales));
-      dispatch(stopLoading());
-      //   toast.success(`Crafts bought successful`, {
-      //     position: "bottom-center",
-      //   });
+      let transactions: Transactions[] = await getAllTransactionsApi(userId);
+      if (transactions.length === 0) {
+        toast.error(SalesApiErrors.ORDER_CRAFTS_TO_SEE_ANALYTICS);
+        dispatch(stopLoading());
+      } else {
+        let validTransactions = transactions.filter(
+          (transaction) => transaction.prodID
+        );
+        dispatch(getTransactions(validTransactions));
+        dispatch(stopLoading());
+      }
     } catch (error: any) {
       dispatch(addError(error?.message));
       dispatch(stopLoading());
