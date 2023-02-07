@@ -38,11 +38,12 @@ const BarChart = () => {
   const role = useSelector(selectRole);
 
   useEffect(() => {
+    let label = ((role === Roles.ADMIN) ? "Sales Rs." : "Expenditure Rs.")
     setChartData({
       labels: months,
       datasets: [
         {
-          label: "Sales Rs.",
+          label: label,
           data: barGraphDataHandler(transactions),
           borderColor: "rgb(53, 162, 235)",
           backgroundColor: "rgb(53, 162, 235, 0.4)",

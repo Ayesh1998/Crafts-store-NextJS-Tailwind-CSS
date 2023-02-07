@@ -31,11 +31,12 @@ const AnalyticsLineGraph = () => {
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
+    let label = ((role === Roles.ADMIN) ? "Sales" : "Orders")
     setChartData({
       labels: months,
       datasets: [
         {
-          label: "Sales ",
+          label:  label,
           data: lineGraphDataHandler(transactions),
           fill: "true",
           tension: 0.2,

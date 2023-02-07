@@ -13,7 +13,7 @@ const PaginationNumber = ({ currentPage, currentPageHandler, page }: Props) => {
         className={`pagination-number ${
           page == currentPage
             ? "bg-gray-500 text-secondary-text"
-            : "bg-secondary-background text-primary-text-500"
+            : "bg-secondary-background text-primary-text-500 focus:shadow-md hover:bg-gray-200"
         }`}
       >
         {page}
