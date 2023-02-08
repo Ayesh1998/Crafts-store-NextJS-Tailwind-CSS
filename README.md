@@ -7,19 +7,19 @@
 - Run "npm install" in command prompt
 - Then run "npm start"
 - Then use http://localhost:3000/
-- Add only image links from  "https://unsplash.com/" domain to crafts.
+- Add only image links from "https://unsplash.com/" domain to crafts.
 - If Analytics not loading disable AdGuards and retry.
 
 ## Hosted URL
 
 - Hosted Link - https://crafts-store.vercel.app/
 
-## How to run frontend storybook 
+## How to run frontend storybook
 
 - Run "npm run storybook" command in command prompt
 - Then use http://localhost:6007/
 
-## How to run frontend tests 
+## How to run frontend tests
 
 - Run "npm run test" command in command prompt
 
@@ -28,18 +28,20 @@
 - This is a NextJs project and used tailwind css for styling and used NextAuth(credentials with JWT) for authentication.
 - And for testing used jest and storybook.
 - And used Atomic Architecture.
-- Root directory files  
+- Root directory files
   - .env.local
-  - package.json 
+  - package.json
   - jest.config.js and jest.setup.js(for jest configuration)
   - middleware.ts (use to protect routes)
   - next.config.js (next configurations)
-  - tailwind.config.js (tailwin  configurations)
-  - tsconfig.json (types  configurations)
+  - tailwind.config.js (tailwin configurations)
+  - tsconfig.json (types configurations)
   - typings.d.ts (reusable types)
-  - .storybook (storybook configur  files)
+  - .storybook (storybook configur files)
   - public (assets which can asses from anywhere in the project)
+
 ##
+
 - And all the other project files are inside src directory
   - src/api directory has files for backend api calling.
   - src/assets directory has assets files.
@@ -63,7 +65,7 @@
 - User can login to the system using login.
 - If the user is an admin,
   - Can see the analytics about crafts sales.
-  - Can add, edit and delete crafts (Add only image links from  "https://unsplash.com/" domain to crafts ).
+  - Can add, edit and delete crafts (Add only image links from "https://unsplash.com/" domain to crafts ).
 - If the user is a buyer
   - Can see the analytics about bought crafts.
   - Can add crafts to basket and see them in checkout.
