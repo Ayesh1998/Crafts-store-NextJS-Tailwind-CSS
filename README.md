@@ -7,6 +7,8 @@
 - Run "npm install" in command prompt
 - Then run "npm start"
 - Then use http://localhost:3000/
+- Add only image links from  "https://unsplash.com/" domain to crafts.
+- If Analytics not loading disable AdGuards and retry.
 
 ## Hosted URL
 
@@ -61,7 +63,7 @@
 - User can login to the system using login.
 - If the user is an admin,
   - Can see the analytics about crafts sales.
-  - Can add, edit and delete crafts.
+  - Can add, edit and delete crafts (Add only image links from  "https://unsplash.com/" domain to crafts ).
 - If the user is a buyer
   - Can see the analytics about bought crafts.
   - Can add crafts to basket and see them in checkout.
