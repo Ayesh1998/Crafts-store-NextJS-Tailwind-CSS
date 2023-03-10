@@ -59,6 +59,12 @@
 
 - NEXT_PUBLIC_BASE_URL - Backend base URL
 - NEXTAUTH_SECRET - Next Auth Secret key
+- NEXT_PUBLIC_SENTRY_DSN - Sentry dsn url
+
+## Sentry Configuration
+
+- Update the NEXT_PUBLIC_SENTRY_DSN key in .env file
+- Update values in sentry.properties file according to your sentry project
 
 ## Frontend functionalities.
 

@@ -8,8 +8,8 @@ const Footer = () => {
     <footer>
       <div className="mx-10 py-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
-          {footerOptions.map((option) => (
-            <FooterOptionList header={option.header} options={option.options} />
+          {footerOptions.map((option, index) => (
+            <FooterOptionList key={index} header={option.header} options={option.options} />
           ))}
           <FooterContact />
         </div>
